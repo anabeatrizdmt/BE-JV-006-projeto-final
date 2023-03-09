@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adicionar pet</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Adicionar pet</h1>
+<form th:action="@{pets}" method="post">
+  <label>Nome</label>
+  <input type="text" name="nome"/>
+  <br/><br/>
+
+  <label>Data de nascimento</label>
+  <input type="date" name="dataNascimento"/>
+  <br/><br/>
+
+  <label>Raça</label>
+  <input type="text" name="raca"/>
+  <br/><br/>
+
+  <label>Cor</label>
+  <input type="text" name="cor"/>
+  <br/><br/>
+
+  <label>Sexo (F/M)</label>
+  <input type="text" name="sexo"/>
+  <br/><br/>
+
+  <label>Nome do dono</label>
+  <input type="text" name="nomeDono"/>
+  <br/><br/>
+
+  <label>DDD do telefone do dono</label>
+  <input type="text" name="dddTelefoneDono"/>
+  <br/><br/>
+
+  <label>Número do telefone do dono</label>
+  <input type="text" name="numeroTelefoneDono"/>
+  <br/><br/>
+
+  <button type="submit">Salvar</button>
+
+</form>
+
+</body>
+</html>

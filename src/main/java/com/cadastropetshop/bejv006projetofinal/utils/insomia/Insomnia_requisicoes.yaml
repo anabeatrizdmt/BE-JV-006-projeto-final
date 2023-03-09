@@ -1,0 +1,215 @@
+_type: export
+__export_format: 4
+__export_date: 2023-03-09T03:28:51.714Z
+__export_source: insomnia.desktop.app:v2022.7.5
+resources:
+  - _id: req_954fd074b3464725a98d095f1088cd9b
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678331574061
+    created: 1678331471408
+    url: http://localhost:8080/rest/pets/adicionar
+    name: Pets - adicionar
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Teka",
+        	"dataNascimento": "2019-03-18",
+        	"raca": "SRD",
+        	"cor": "branco e bege",
+        	"sexo": "F",
+        	"nomeDono": "Ana",
+        	"dddTelefoneDono": "21",
+        	"numeroTelefoneDono": "998887777" 
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1678331471408
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    parentId: null
+    modified: 1678314916864
+    created: 1678314916864
+    name: My Collection
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_fc197af89aca453489753536d3ef40b0
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678331587664
+    created: 1678319479122
+    url: http://localhost:8080/rest/pets/listarTodos
+    name: Pets - listarTodos
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1678325250282
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_84632e592c6d474d96de44acbc975b3b
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678332122222
+    created: 1678331021442
+    url: http://localhost:8080/rest/pets/listaPorNomeDono/An
+    name: Pets - listaPorNomeDono
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1678325250232
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_35189f08f18443ee82ab2148eee44352
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678331845268
+    created: 1678331836640
+    url: http://localhost:8080/rest/pets/listaPorNumeroTelefoneDono/9988
+    name: Pets - listaPorNumeroTelefoneDono
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1678318894758.3125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_df5f0fa47f86409a896fd2a35edc3ec1
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678331947869
+    created: 1678331892465
+    url: http://localhost:8080/rest/pets/2
+    name: Pets - buscarPorId
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1678315717021.4688
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a76a92f95c25457d840ef9941eef69a9
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678332282827
+    created: 1678331933140
+    url: http://localhost:8080/rest/pets/editar?id=2
+    name: Pets - editar
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Tekinha",
+        	"dataNascimento": "2019-03-18",
+        	"raca": "SRD",
+        	"cor": "branco e bege",
+        	"sexo": "F",
+        	"nomeDono": "Ana",
+        	"dddTelefoneDono": "21",
+        	"numeroTelefoneDono": "998887777" 
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_f201e81f68074f0b97881c322271925b
+    authentication: {}
+    metaSortKey: -1678314922587.2578
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ab89e1df49b34067bfc59b8540e9c4c1
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678332102563
+    created: 1678331915883
+    url: http://localhost:8080/rest/pets/3
+    name: Pets - deletarPorId
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1678314128153.0469
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_71375f9eb9bf19676ee37cd51eb4a691da3a99be
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678314916869
+    created: 1678314916869
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1678314916869
+    _type: environment
+  - _id: jar_71375f9eb9bf19676ee37cd51eb4a691da3a99be
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678314916872
+    created: 1678314916872
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_bd83c66fbeea48d086bdb4410890ea5d
+    parentId: wrk_8c0e91d30cd949fdaf73b19d12387e63
+    modified: 1678314916865
+    created: 1678314916865
+    fileName: My Collection
+    contents: ""
+    contentType: yaml
+    _type: api_spec

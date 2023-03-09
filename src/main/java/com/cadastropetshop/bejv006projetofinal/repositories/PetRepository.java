@@ -9,6 +9,8 @@ import java.util.List;
 @Repository
 public interface PetRepository extends JpaRepository<Pet, Long> {
 
+    List<Pet> queryByNomeDono(String nomeDono);
+
     List<Pet> findPetsByNomeDonoContaining(String nomeDono);
 
     List<Pet> findPetsByNumeroTelefoneDonoContaining(String numeroTelefoneDono);

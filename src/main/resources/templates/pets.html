@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de pets</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Lista de pets</h1>
+  <br/>
+
+  <h2>Pesquisar por nome do(a) dono(a)</h2>
+  <form method="post" th:action="@{./search}">
+    <input type="text" name="nomeDono"/>
+    <button type="submit">Pesquisar</button>
+  </form>
+
+  <br/>
+  <br/>
+
+  <h3>Lista de pets cadastrados</h3>
+
+  <table border='1' style='border-collapse:collapse' width="1200px">
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Data de nascimento</th>
+      <th>Raça</th>
+      <th>Cor</th>
+      <th>Sexo</th>
+      <th>Nome do dono</th>
+      <th>DDD do telefone do dono</th>
+      <th>Número do telefone do dono</th>
+    </tr>
+    <tr th:each="pet : ${pets}">
+      <td th:text="${pet.id}" width="100px"></td>
+      <td th:text="${pet.nome}" width="100px"></td>
+      <td th:text="${pet.dataNascimento}" width="100px"></td>
+      <td th:text="${pet.raca}" width="100px"></td>
+      <td th:text="${pet.cor}" width="100px"></td>
+      <td th:text="${pet.sexo}" width="100px"></td>
+      <td th:text="${pet.nomeDono}" width="100px"></td>
+      <td th:text="${pet.dddTelefoneDono}" width="100px"></td>
+      <td th:text="${pet.numeroTelefoneDono}" width="100px"></td>
+
+      <td>
+        <form method="post" th:action="@{./delete/{id}(id=${pet.id})}">
+          <button type="submit">Excluir</button>
+        </form>
+      </td>
+
+    </tr>
+  </table>
+
+  <br/>
+  <br/>
+
+  <button><a href="add-pets">Novo pet</a></button>
+</body>
+</html>
