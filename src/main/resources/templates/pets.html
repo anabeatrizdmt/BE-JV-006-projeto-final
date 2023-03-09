@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Lista de pets</title>
+  <title>AnaVet | Clínica Veterinária e Petshop</title>
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Lista de pets</h1>
+  <h1>AnaVet | Clínica Veterinária e Petshop</h1>
   <br/>
 
   <h2>Pesquisar por nome do(a) dono(a)</h2>
@@ -49,7 +49,7 @@
       <td th:text="${pet.numeroTelefoneDono}" width="100px"></td>
 
       <td>
-        <form method="post" th:action="@{./delete/{id}(id=${pet.id})}">
+        <form method="post" th:action="@{./delete/{id}(id=${pet.id})}" >
           <button type="submit">Excluir</button>
         </form>
       </td>
