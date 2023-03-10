@@ -60,7 +60,7 @@ public class PetController {
     @PostMapping("/delete/{id}")
     public String deletePet(@PathVariable("id") Long id) {
         petService.deleteById(id);
-        return "pets";
+        return "redirect:/pets/pets";
     }
 
     @PostMapping("/search")
