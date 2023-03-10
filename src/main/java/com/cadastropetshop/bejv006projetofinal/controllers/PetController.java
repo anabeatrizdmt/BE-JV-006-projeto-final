@@ -30,6 +30,7 @@ public class PetController {
     @PostMapping("/pets")
     public String addPet(@RequestParam("nome") String nome,
                          @RequestParam("dataNascimento") LocalDate dataNascimento,
+                         @RequestParam("especie") String especie,
                          @RequestParam("raca") String raca,
                          @RequestParam("cor") String cor,
                          @RequestParam("sexo") Sexo sexo,
@@ -39,6 +40,7 @@ public class PetController {
         Pet pet = new Pet();
         pet.setNome(nome);
         pet.setDataNascimento(dataNascimento);
+        pet.setEspecie(especie);
         pet.setRaca(raca);
         pet.setCor(cor);
         pet.setSexo(sexo);

@@ -16,6 +16,7 @@ public class Pet {
     private Long id;
     private String nome;
     private LocalDate dataNascimento;
+    private String especie;
     private String raca;
     private String cor;
     private Sexo sexo;
@@ -45,6 +46,14 @@ public class Pet {
 
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
+    }
+
+    public String getEspecie() {
+        return especie;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
     }
 
     public String getRaca() {

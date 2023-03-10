@@ -6,6 +6,27 @@
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
+      background-color: #FBFAF5;
+    }
+    h1{
+      color: #E27D60;
+      margin-left: 30px;
+      font-weight: bolder;
+    }
+    h2 {
+      color: #E8A87C;
+      margin-left: 30px;
+      font-weight: bolder;
+    }
+    h3 {
+      color: #C38D9E;
+      margin-left: 30px;
+      font-weight: bolder;
+
+    }
+    table, form, button {
+      margin-left: 30px;
+      font-family : inherit;
     }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -30,6 +51,7 @@
       <th>Id</th>
       <th>Nome</th>
       <th>Data de nascimento</th>
+      <th>Espécie</th>
       <th>Raça</th>
       <th>Cor</th>
       <th>Sexo</th>
@@ -38,17 +60,17 @@
       <th>Número do telefone do dono</th>
     </tr>
     <tr th:each="pet : ${pets}">
-      <td th:text="${pet.id}" width="100px"></td>
-      <td th:text="${pet.nome}" width="100px"></td>
-      <td th:text="${pet.dataNascimento}" width="100px"></td>
-      <td th:text="${pet.raca}" width="100px"></td>
-      <td th:text="${pet.cor}" width="100px"></td>
-      <td th:text="${pet.sexo}" width="100px"></td>
-      <td th:text="${pet.nomeDono}" width="100px"></td>
-      <td th:text="${pet.dddTelefoneDono}" width="100px"></td>
-      <td th:text="${pet.numeroTelefoneDono}" width="100px"></td>
-
-      <td>
+      <td align="center" th:text="${pet.id}" width="100px"></td>
+      <td align="center" th:text="${pet.nome}" width="100px"></td>
+      <td align="center" th:text="${pet.dataNascimento}" width="100px"></td>
+      <td align="center" th:text="${pet.especie}" width="100px"></td>
+      <td align="center" th:text="${pet.raca}" width="100px"></td>
+      <td align="center" th:text="${pet.cor}" width="100px"></td>
+      <td align="center" th:text="${pet.sexo}" width="100px"></td>
+      <td align="center" th:text="${pet.nomeDono}" width="100px"></td>
+      <td align="center" th:text="${pet.dddTelefoneDono}" width="100px"></td>
+      <td align="center" th:text="${pet.numeroTelefoneDono}" width="100px"></td>
+      <td align="center">
         <form method="post" th:action="@{./delete/{id}(id=${pet.id})}" >
           <button type="submit">Excluir</button>
         </form>
