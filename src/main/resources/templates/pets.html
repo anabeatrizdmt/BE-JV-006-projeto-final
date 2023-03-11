@@ -1,87 +1,93 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>AnaVet | Clínica Veterinária e Petshop</title>
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #FBFAF5;
-    }
-    h1{
-      color: #E27D60;
-      margin-left: 30px;
-      font-weight: bolder;
-    }
-    h2 {
-      color: #E8A87C;
-      margin-left: 30px;
-      font-weight: bolder;
-    }
-    h3 {
-      color: #C38D9E;
-      margin-left: 30px;
-      font-weight: bolder;
+    <meta charset="UTF-8">
+    <title>AnaVet | Clínica Veterinária e Petshop</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FBFAF5;
+        }
 
-    }
-    table, form, button {
-      margin-left: 30px;
-      font-family : inherit;
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        h1 {
+            color: #E27D60;
+            margin-left: 30px;
+            font-weight: bolder;
+        }
+
+        h2 {
+            color: #E8A87C;
+            margin-left: 30px;
+            font-weight: bolder;
+        }
+
+        h3 {
+            color: #C38D9E;
+            margin-left: 30px;
+            font-weight: bolder;
+
+        }
+
+        table, form, button {
+            margin-left: 30px;
+            font-family: inherit;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>AnaVet | Clínica Veterinária e Petshop</h1>
-  <br/>
+<h1>AnaVet | Clínica Veterinária e Petshop</h1>
+<br/>
 
-  <h2>Pesquisar por nome do(a) dono(a)</h2>
-  <form method="post" th:action="@{./search}">
-    <input type="text" name="nomeDono"/>
+<h2>Pesquisar por nome do(a) dono(a)</h2>
+<form method="post" th:action="@{./search}">
+    <label>
+        <input type="text" name="nomeDono"/>
+    </label>
     <button type="submit">Pesquisar</button>
-  </form>
+</form>
 
-  <br/>
-  <br/>
+<br/>
+<br/>
 
-  <h3>Lista de pets cadastrados</h3>
+<h3>Lista de pets cadastrados</h3>
 
-  <table border='1' style='border-collapse:collapse' width="1200px">
+<table border='1' style='border-collapse:collapse' width="1200px">
     <tr>
-      <th>Id</th>
-      <th>Nome</th>
-      <th>Data de nascimento</th>
-      <th>Espécie</th>
-      <th>Raça</th>
-      <th>Cor</th>
-      <th>Sexo</th>
-      <th>Nome do dono</th>
-      <th>DDD do telefone do dono</th>
-      <th>Número do telefone do dono</th>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Data de nascimento</th>
+        <th>Espécie</th>
+        <th>Raça</th>
+        <th>Cor</th>
+        <th>Sexo</th>
+        <th>Nome do dono</th>
+        <th>DDD do telefone do dono</th>
+        <th>Número do telefone do dono</th>
     </tr>
     <tr th:each="pet : ${pets}">
-      <td align="center" th:text="${pet.id}" width="100px"></td>
-      <td align="center" th:text="${pet.nome}" width="100px"></td>
-      <td align="center" th:text="${pet.dataNascimento}" width="100px"></td>
-      <td align="center" th:text="${pet.especie}" width="100px"></td>
-      <td align="center" th:text="${pet.raca}" width="100px"></td>
-      <td align="center" th:text="${pet.cor}" width="100px"></td>
-      <td align="center" th:text="${pet.sexo}" width="100px"></td>
-      <td align="center" th:text="${pet.nomeDono}" width="100px"></td>
-      <td align="center" th:text="${pet.dddTelefoneDono}" width="100px"></td>
-      <td align="center" th:text="${pet.numeroTelefoneDono}" width="100px"></td>
-      <td align="center">
-        <form method="post" th:action="@{./delete/{id}(id=${pet.id})}" >
-          <button type="submit">Excluir</button>
-        </form>
-      </td>
+        <td text-align="center" th:text="${pet.id}" width="100px"></td>
+        <td text-align="center" th:text="${pet.nome}" width="100px"></td>
+        <td text-align="center" th:text="${pet.dataNascimento}" width="100px"></td>
+        <td text-align="center" th:text="${pet.especie}" width="100px"></td>
+        <td text-align="center" th:text="${pet.raca}" width="100px"></td>
+        <td text-align="center" th:text="${pet.cor}" width="100px"></td>
+        <td text-align="center" th:text="${pet.sexo}" width="100px"></td>
+        <td text-align="center" th:text="${pet.nomeDono}" width="100px"></td>
+        <td text-align="center" th:text="${pet.dddTelefoneDono}" width="100px"></td>
+        <td text-align="center" th:text="${pet.numeroTelefoneDono}" width="100px"></td>
+        <td text-align="center">
+            <form method="post" th:action="@{./delete/{id}(id=${pet.id})}">
+                <button type="submit">Excluir</button>
+            </form>
+        </td>
 
     </tr>
-  </table>
+</table>
 
-  <br/>
-  <br/>
+<br/>
+<br/>
 
-  <button><a href="add-pets">Novo pet</a></button>
+<button><a href="add-pets">Novo pet</a></button>
 </body>
 </html>

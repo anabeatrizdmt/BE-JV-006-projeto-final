@@ -25,6 +25,7 @@ public class PetService {
     public List<Pet> queryByNomeDono(String nomeDono) {
         return petRepository.queryByNomeDono(nomeDono);
     }
+
     public List<Pet> findByNomeDonoContaining(String nomeDono) {
         return petRepository.findPetsByNomeDonoContaining(nomeDono);
     }

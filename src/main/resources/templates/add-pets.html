@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AnaVet | Clínica Veterinária e Petshop</title>
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #FBFAF5;
-    }
-    h1{
-      color: #E27D60;
-      margin-left: 30px;
-      font-weight: bolder;
-    }
-    h2 {
-      color: #E8A87C;
-      margin-left: 30px;
-      font-weight: bolder;
-    }
-    h3 {
-      color: #C38D9E;
-      margin-left: 30px;
-      font-weight: bolder;
+    <meta charset="UTF-8">
+    <title>AnaVet | Clínica Veterinária e Petshop</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FBFAF5;
+        }
 
-    }
-    table, form, button {
-      margin-left: 30px;
-      font-family : inherit;
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        h1 {
+            color: #E27D60;
+            margin-left: 30px;
+            font-weight: bolder;
+        }
+
+        h2 {
+            color: #E8A87C;
+            margin-left: 30px;
+            font-weight: bolder;
+        }
+
+        h3 {
+            color: #C38D9E;
+            margin-left: 30px;
+            font-weight: bolder;
+
+        }
+
+        table, form, button {
+            margin-left: 30px;
+            font-family: inherit;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
 <h1>Adicionar pet</h1>
 <form th:action="@{pets}" method="post">
-  <label>Nome</label>
-  <input type="text" name="nome"/>
-  <br/><br/>
+    <label>Nome</label>
+    <input type="text" name="nome"/>
+    <br/><br/>
 
-  <label>Data de nascimento</label>
-  <input type="date" name="dataNascimento"/>
-  <br/><br/>
+    <label>Data de nascimento</label>
+    <input type="date" name="dataNascimento"/>
+    <br/><br/>
 
-  <label>Espécie</label>
-  <input type="text" name="especie"/>
-  <br/><br/>
+    <label>Espécie</label>
+    <input type="text" name="especie"/>
+    <br/><br/>
 
-  <label>Raça</label>
-  <input type="text" name="raca"/>
-  <br/><br/>
+    <label>Raça</label>
+    <input type="text" name="raca"/>
+    <br/><br/>
 
-  <label>Cor</label>
-  <input type="text" name="cor"/>
-  <br/><br/>
+    <label>Cor</label>
+    <input type="text" name="cor"/>
+    <br/><br/>
 
-  <label>Sexo (F/M)</label>
-  <input type="text" name="sexo"/>
-  <br/><br/>
+    <label>Sexo (F/M)</label>
+    <input type="text" name="sexo"/>
+    <br/><br/>
 
-  <label>Nome do dono</label>
-  <input type="text" name="nomeDono"/>
-  <br/><br/>
+    <label>Nome do dono</label>
+    <input type="text" name="nomeDono"/>
+    <br/><br/>
 
-  <label>DDD do telefone do dono</label>
-  <input type="text" name="dddTelefoneDono"/>
-  <br/><br/>
+    <label>DDD do telefone do dono</label>
+    <input type="text" name="dddTelefoneDono"/>
+    <br/><br/>
 
-  <label>Número do telefone do dono</label>
-  <input type="text" name="numeroTelefoneDono"/>
-  <br/><br/>
+    <label>Número do telefone do dono</label>
+    <input type="text" name="numeroTelefoneDono"/>
+    <br/><br/>
 
-  <button type="submit">Salvar</button>
+    <button type="submit">Salvar</button>
 
 </form>
 

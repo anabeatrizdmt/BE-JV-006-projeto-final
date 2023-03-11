@@ -26,29 +26,29 @@ public class PetRestController {
     }
 
     @GetMapping("/listaPorNomeDono/{nomeDono}")
-    public List<Pet> findByNomeDonoContaining (@PathVariable String nomeDono) {
+    public List<Pet> findByNomeDonoContaining(@PathVariable String nomeDono) {
         return petService.findByNomeDonoContaining(nomeDono);
     }
 
     @GetMapping("/listaPorNumeroTelefoneDono/{numeroTelefoneDono}")
-    public List<Pet> findByNumeroTelefoneDonoContaining (@PathVariable String numeroTelefoneDono) {
+    public List<Pet> findByNumeroTelefoneDonoContaining(@PathVariable String numeroTelefoneDono) {
         return petService.findByNumeroTelefoneDonoContaining(numeroTelefoneDono);
     }
 
     @GetMapping("/{id}")
-    public Pet findById(@PathVariable Long id){
+    public Pet findById(@PathVariable Long id) {
         return petService.findById(id);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable Long id){
+    public void deleteById(@PathVariable Long id) {
         petService.deleteById(id);
     }
 
     @PostMapping("/editar")
-    public ResponseEntity<?> update(@RequestParam Long id, @RequestBody Pet pet){
+    public ResponseEntity<?> update(@RequestParam Long id, @RequestBody Pet pet) {
 
-        if (pet.getNome() == null){
+        if (pet.getNome() == null) {
             System.out.println("O nome não pode ser nulo!");
             return ResponseEntity.badRequest().body("O nome não pode ser nulo!");
         }
@@ -57,7 +57,7 @@ public class PetRestController {
 
         try {
             petService.save(pet);
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             return ResponseEntity.internalServerError().body(e.getMessage());
         }
 

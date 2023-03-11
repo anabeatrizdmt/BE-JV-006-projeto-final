@@ -9,7 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.util.Collection;
 import java.util.List;
 
 
@@ -21,7 +20,7 @@ public class PetController {
     private PetService petService;
 
     @GetMapping("/pets")
-    public String getAllPets(Model model){
+    public String getAllPets(Model model) {
         List<Pet> pets = petService.findAll();
         model.addAttribute("pets", pets);
         return "pets";
@@ -36,7 +35,7 @@ public class PetController {
                          @RequestParam("sexo") Sexo sexo,
                          @RequestParam("nomeDono") String nomeDono,
                          @RequestParam("dddTelefoneDono") String dddTelefoneDono,
-                         @RequestParam("numeroTelefoneDono") String numeroTelefoneDono){
+                         @RequestParam("numeroTelefoneDono") String numeroTelefoneDono) {
         Pet pet = new Pet();
         pet.setNome(nome);
         pet.setDataNascimento(dataNascimento);
@@ -53,7 +52,7 @@ public class PetController {
     }
 
     @GetMapping("add-pets")
-    public String createPet(){
+    public String createPet() {
         return "add-pets";
     }
 
